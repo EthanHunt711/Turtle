@@ -6,10 +6,11 @@ from turtle import *
 def spiral():
     reset()
     speed(40)
-    pensize(2)
+    # pensize(2)
     pendown()
+    line_one = 10
     for n in range(40):
-        forward(n + (n + 10))
+        forward(n + line_one)
         left(90)
 
 

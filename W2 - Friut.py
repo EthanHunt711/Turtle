@@ -25,5 +25,4 @@ def friut_val(fruit):
         return 1
 
 
-circle_area(30)
-sphere_volume(30)
+
