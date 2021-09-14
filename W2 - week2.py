@@ -40,10 +40,16 @@ def g(x):
 
 def sum_squares(n):
     total = 0
-    #n = input(int('please enter a valid number: '))
-    for i in range(n+1):
+    # n = input(int('please enter a valid number: '))
+    for i in range(n + 1):
         total += i ** 2
     print(total)
 
 
-sum_squares(4)
+def two_dice():
+    for n in range(1, 7):
+        for x in range(1, 7):
+            print('Red dice is', n, 'and blue dice is', x, 'giving', n + x)
+
+
+
