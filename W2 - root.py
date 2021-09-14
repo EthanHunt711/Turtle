@@ -1,7 +1,7 @@
 def find_root(number):
+    guess = 1.0
     for x in range(1, 11):
-        guess = 1.0
-        guess = (number + guess / guess) / 2
+        guess = ((number / guess) + guess) / 2
         print('after iteration', x, 'my guess is', guess)
 
 
@@ -10,4 +10,4 @@ def main():
     print(find_root(user_guess))
 
 
-find_root(19.9)
+find_root(4)
