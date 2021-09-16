@@ -49,7 +49,7 @@ def sum_squares(n):
 def two_dice():
     for n in range(1, 7):
         for x in range(1, 7):
-            print('Red dice is', n, 'and blue dice is', x, 'giving', n + x)
+            print('Red die is', n, 'and blue die is', x, 'giving', n + x)
 
 
 
