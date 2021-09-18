@@ -47,4 +47,4 @@ def two_dice():
             print('Red die is', n, 'and blue die is', x, 'giving', n + x)
 
 
-
+check_numbers(101, 101)
