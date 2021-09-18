@@ -43,13 +43,14 @@ def sum_squares(n):
     # n = input(int('please enter a valid number: '))
     for i in range(n + 1):
         total += i ** 2
-    print(total)
+    return total
 
 
 def two_dice():
     for n in range(1, 7):
         for x in range(1, 7):
             print('Red die is', n, 'and blue die is', x, 'giving', n + x)
+
 
 
 
