@@ -7,7 +7,7 @@ def find_root(number):
 
 def main():
     user_guess = float(input("please enter a random number: "))
-    print(find_root(user_guess))
+    find_root(user_guess)
 
 
 main()
