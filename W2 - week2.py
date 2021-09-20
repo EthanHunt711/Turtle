@@ -29,7 +29,7 @@ def g(x):
         return 0
     elif 2 <= x <= 5:
         return (x - 2) / 3
-    elif 5 <= x <= 10:
+    elif 5 <= x:
         return (10 - x) / 5
 
 
@@ -47,4 +47,4 @@ def two_dice():
             print('Red die is', n, 'and blue die is', x, 'giving', n + x)
 
 
-check_numbers(101, 101)
+
