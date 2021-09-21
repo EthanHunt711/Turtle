@@ -1,23 +1,45 @@
-def secret_number():
-    secret_num = 28
-    guess_num = int(input('what is your guess? '))
-    next_guess = int(input('please guess again! '))
-    guess_list = []
-    guess_list.append(guess_num)
-    guess_list.append(next_guess)
-    print(guess_num)
-    while guess_num != secret_num:
-        if guess_num < secret_num:
-            print('that is too low')
-            print(next_guess)
-            break
-        else:
-            print('that is too high')
-            print(next_guess)
-            break
-    if guess_num == secret_num:
-        print('congratulations, that is correct!')
-        print('You made it in', len(guess_list), 'guesses.')
-        print('That is really good!')
+import random
 
-secret_number()
+
+def secret_number():
+    count_guess = 0
+    secret_num = random.randrange(1, 99, 1)
+    guess_num = 'what is your guess? '
+    next_guess = 'please guess again! '
+    low_guess = 'That is too low'
+    high_guess = 'That is too high'
+    correct_guess = 'Congratulations! That is correct'
+    good_guess = 'That is really good'
+    after_four_guesses = 'You can do better!'
+    bad_guess = 'It took you a long time but you made it at last'
+
+    guess = int(input(guess_num))
+
+    while guess:
+        count_guess += 1
+        if guess < secret_num:
+            print(low_guess)
+            guess = int(input(next_guess))
+
+        elif guess > secret_num:
+            print(high_guess)
+            guess = int(input(next_guess))
+        elif guess == secret_num:
+            print(correct_guess)
+            print('You made it in', count_guess, 'guesses.')
+            if count_guess <= 3:
+                print(good_guess)
+                break
+            elif count_guess > 4 < 6:
+                print(after_four_guesses)
+                break
+            elif count_guess > 6:
+                print(bad_guess)
+                break
+
+
+def game():
+    secret_number()
+
+
+game()
