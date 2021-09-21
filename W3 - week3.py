@@ -3,21 +3,25 @@ import random
 
 def odd_part(n):
     while n % 2 == 0:
-        print(n)
         n = n / 2
-        if n % 2 != 0:
-            print(n)
+    else:
+        n
+    print(n)
 
 
 def count_rand(limit):
     total = 0
-    n = random.Random()
+    n = random.random()
+    random_numbers_count = 0
     while total < limit:
-        print(n)
+        random_numbers_count += 1
         total += n
         if total >= limit:
-            print(n)
+            total
             break
+
+    # print(total)
+    print(random_numbers_count)
 
 
 def first_short(words):
@@ -25,7 +29,10 @@ def first_short(words):
         if len(short_word) < 5:
             print(short_word)
             break
+        else:
+            print('')
 
 
 # first_short(['cheetah', 'mongoose', 'bat', 'fox'])
-count_rand(4)
+# count_rand(3)
+# odd_part(1123456)
