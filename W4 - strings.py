@@ -7,8 +7,10 @@ def indef(text):
 
 
 def parens(string):
+    alphabets = []
     for letter in string:
-        print('('+letter+')')
+        alphabets.append(letter)
+    print(alphabets, sep=", ")
 
 
 def three_rays(string):
@@ -27,13 +29,15 @@ def swap(s):
 
 
 def first_digit(string):
-    letter_list = []
+    string_char = []
     for letter in string:
-        letter_list.append(letter)
+        string_char.append(letter)
         if letter.isdigit():
             return letter
-            break
-        else:
-            return 0
+
+    else:
+        return 0
+
+
 
 
