@@ -44,3 +44,4 @@ def evaluation(number):
         print(bad_guess)
 
 
+game()

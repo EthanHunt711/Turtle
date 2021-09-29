@@ -34,9 +34,20 @@ def first_digit(string):
         string_char.append(letter)
         if letter.isdigit():
             return letter
-
     else:
         return 0
+
+
+def numbers_for_uc(string):
+
+    for index, character in enumerate(string):
+        if character.isupper():
+            return string.replace(character, str(index))
+        if character.islower():
+            return character
+    return string
+
+
 
 
 
