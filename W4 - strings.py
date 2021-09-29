@@ -43,8 +43,7 @@ def numbers_for_uc(string):
     for index, character in enumerate(string):
         if character.isupper():
             return string.replace(character, str(index))
-        if character.islower():
-            return character
+
     return string
 
 
