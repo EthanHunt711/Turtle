@@ -39,15 +39,17 @@ def first_digit(string):
 
 
 def numbers_for_uc(string):
-
     for index, character in enumerate(string):
         if character.isupper():
-            return string.replace(character, str(index))
-
+            return string.replace(character, f'[{str(index)}]')
     return string
 
 
-
+def grid(s):
+    n = 0
+    for i in s:
+        while len(s):
+            s.startwirh(n+i)
 
 
 
