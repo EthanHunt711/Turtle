@@ -21,7 +21,8 @@ def has_all_digits(s):
 
 
 def find_pers_number():
-    while not has_all_digits(n * n):
+    n = 0
+    while not has_all_digits(str(n * n)):
         n = n + 1
     return n
 
