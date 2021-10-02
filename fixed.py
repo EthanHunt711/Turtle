@@ -20,7 +20,7 @@ def has_all_digits(s):
     return True
 
 
-def find_pers_number(n):
+def find_pers_number():
     while not has_all_digits(n * n):
         n = n + 1
     return n
@@ -28,5 +28,6 @@ def find_pers_number(n):
 
 def countmatch(s1, s2):
     for i, char in enumerate(s1):
+        print(i, char)
         if char != s2[i]:
             return i
