@@ -1,10 +1,7 @@
 def mymin(numbers):
-    # numbers.sort()
-    first_min = numbers[0]
-    for i in range(len(numbers)):
-        if numbers[i] < first_min:
-            first_min = numbers[i]
-    return first_min
+    n = 0
+    for i in numbers:
+        print(i+1)
 
 
 def find_longer(words, n):
@@ -30,8 +27,5 @@ def histogram(numbers, char):
     return result_char
 
 
-def allit(words):
-    letter = words[0]
-    for x in range(len(words)):
-        if
+
 
