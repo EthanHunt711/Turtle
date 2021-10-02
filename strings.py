@@ -44,10 +44,7 @@ def numbers_for_uc(string):
 
 
 def grid(s):
-    n = 0
-    for i in s:
-        while len(s):
-            s.startwirh(n+i)
-
-
+    for i in range(len(s)):
+        string = s[i:]+s[:i]
+        print(string)
 
