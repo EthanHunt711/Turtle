@@ -29,6 +29,7 @@ def find_pers_number():
 
 def countmatch(s1, s2):
     for i, char in enumerate(s1):
-        print(i, char)
+        s1 = s1.lower()
+        s2 = s2.lower()
         if char != s2[i]:
             return i
