@@ -1,15 +1,15 @@
 def outside_parens(string):
     output = ''
     inside_paren = False
-    for i in string:
+    for char in string:
         if inside_paren:
-            if i == ')':
+            if char == ')':
                 inside_paren = False
         else:
-            if i == '(':
+            if char == '(':
                 inside_paren = True
             else:
-                output = output + i
+                output = output + char
     return output
 
 
