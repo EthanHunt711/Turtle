@@ -12,5 +12,5 @@ def is_harshad(n):
 
 
 for i in range(1, 201):
-    if is_harshad(i) is True:
+    if is_harshad(i):
         print(i)

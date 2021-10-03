@@ -1,9 +1,9 @@
 def indef(text):
-    first_letter = text[0]
-    if first_letter == 'a' or 'e' or 'o' or 'u' or 'i':
+    vowel = ['a', 'e', 'o', 'u', 'i']
+    i = text[0]
+    if i in vowel:
         return 'an ' + text
-    else:
-        return 'a ' + text
+    return 'a ' + text
 
 
 def parens(string):
@@ -28,18 +28,19 @@ def swap(s):
         return s
 
 
-def first_digit(string):
-    for letter in string:
-        if letter.isdigit():
-            return letter
+def firstdigit(string):
+    for i in string:
+        if i.isdigit():
+            return int(i)
     return 0
 
 
 def numbers_for_uc(string):
 
     for index, character in enumerate(string):
+        print(index, character)
         if character.isupper():
-            string = string.replace(character, f'[{str(index)}]')
+            string = string.replace(character, f'[{index}]', 1)
     return string
 
 

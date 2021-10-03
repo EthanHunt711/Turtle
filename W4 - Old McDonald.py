@@ -23,6 +23,6 @@ def print_song():
     print_verse('cow', 'moo')
     print_verse('duck', 'quack')
     print_verse('chick', 'cluck')
-
+    print_verse('owl', 'uou')
 
 print_song()
