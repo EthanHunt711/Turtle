@@ -1,34 +1,34 @@
 def mymin(numbers):
-    min = 0
-    for n in numbers:
-        print(n)
-        if [n] < [n+1]:
-            min = n
-        return min
+    numbers.sort()
+    return numbers[0]
 
 
 def find_longer(words, n):
     for i in words:
         if len(i) > n:
-            return words[i]
-    return words
-
-
-def first_longer(words, n):
-    for i in range(len(words)):
-        if len(words[i]) > n:
-            return words[i]
-        else:
-            return None
-    return words
+            return i
+    else:
+        return None
 
 
 def histogram(numbers, char):
-    result_char = 0
-    for i in numbers:
-        result_char = i * char
-    return result_char
+    for n in numbers:
+        print(n * char)
 
 
+def allit(words):
+    alliterate = True
+    if len(words) == 0:
+        return alliterate
+    else:
+        first_letter = words[0][:1]
+        for w in words:
+            if w.startswith(first_letter):
+                alliterate = True
+            elif len(words) == 1:
+                alliterate = True
+            else:
+                alliterate = False
+        return alliterate
 
 
