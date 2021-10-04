@@ -31,13 +31,18 @@ def countmatch(s1, s2):
     for i, char in enumerate(s1):
         s1 = s1.lower()
         s2 = s2.lower()
-        if char != s2[i]:
-            return i
-        elif s1 == s2:
-            return len(s1)
-        elif s2.startswith(s1):
-            return len(s1)
-        elif s1.startswith(s2):
-            return len(s2)
+        if (len(s1) > 0) and (len(s2) > 0):
+            if char != s2[i]:
+                return i
+            elif s1 == s2:
+                return len(s1)
+            elif s2.startswith(s1):
+                return len(s1)
+            elif s1.startswith(s2):
+                return len(s2)
+        else:
+            return None
+
+
 
 

@@ -1,12 +1,15 @@
 def mymin(numbers):
-    n = 0
-    for i in numbers:
-        print(i+1)
+    min = 0
+    for n in numbers:
+        print(n)
+        if [n] < [n+1]:
+            min = n
+        return min
 
 
 def find_longer(words, n):
-    for i in range(len(words)):
-        if len(words[i]) > n:
+    for i in words:
+        if len(i) > n:
             return words[i]
     return words
 
