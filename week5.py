@@ -19,16 +19,16 @@ def histogram(numbers, char):
 def allit(words):
     alliterate = True
     if len(words) == 0:
-        return alliterate
-    else:
+        alliterate = True
+    elif len(words) == 1:
+        alliterate = True
+    elif len(words) > 1:
         first_letter = words[0][:1]
         for w in words:
             if w.startswith(first_letter):
                 alliterate = True
-            elif len(words) == 1:
-                alliterate = True
             else:
                 alliterate = False
-        return alliterate
+    return alliterate
 
 
