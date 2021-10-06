@@ -12,11 +12,9 @@ def find_longer(words, n):
 
 
 def histogram(numbers, char):
-    row = 0
     for n in numbers:
-        row = n * char
-    return row
-
+        result = n * char
+        print(result)
 
 
 def allit(words):
@@ -63,6 +61,29 @@ def endings(words):
 
 def vhistogram(numbers, char):
     print ('no')
+
+
+def procrustean(numbers, low, high):
+    for i, n in enumerate(numbers):
+        if n < low:
+            numbers[i] = low
+        elif n > high:
+            numbers[i] = high
+    return numbers
+
+
+def progress(string):
+    words = string.split()
+    record = 0
+    found = []
+    for word in words:
+        if len(word) > record:
+            found.append(word)
+            record = len(word)
+    return '->'.join(found)
+
+
+
 
 
 
