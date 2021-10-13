@@ -74,17 +74,6 @@ def endings(words):
 
 
 def vhistogram(numbers, char):
-    v_result = []
-    for n in numbers:
-        result = n * char
-        v_result.append((max(numbers)-n) * " ")
-        v_result.append(result)
-    for c in range(len(v_result)):
-        for x in v_result:
-            print(x[c-1:c], end=' ')
-        print()
-
-def vhistogramO(numbers, char):
     v_line = []
     for n in numbers:
         v_line.append(((max(numbers)-n) * " ") + (n * char))
@@ -92,7 +81,6 @@ def vhistogramO(numbers, char):
         for l in v_line:
             print(l[c-1:c], end=' ')
         print()
-
 
 
 def procrustean(numbers, low, high):
