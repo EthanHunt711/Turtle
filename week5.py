@@ -84,6 +84,16 @@ def vhistogram(numbers, char):
             print(x[c-1:c], end=' ')
         print()
 
+def vhistogramO(numbers, char):
+    v_line = []
+    for n in numbers:
+        v_line.append(((max(numbers)-n) * " ") + (n * char))
+    for c in range(len(v_line)):
+        for l in v_line:
+            print(l[c-1:c], end=' ')
+        print()
+
+
 
 def procrustean(numbers, low, high):
     for i, n in enumerate(numbers):

@@ -14,7 +14,9 @@ def find_shortest_sent(word):
     for s in emma:
         if word in s:
             min_sen.append(s)
-    return min(min_sen)
+            if len(min_sen) > 0:
+                return min(min_sen)
+        return None
 
 
 def conc3(words):
