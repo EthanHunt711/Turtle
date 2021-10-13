@@ -52,14 +52,14 @@ def anti_allit(words):
 
 
 def addpairs(numbers):
-    result = 0
-    for i, n in enumerate(numbers):
-        if i < len(numbers):
-            # print(numbers[i+1])
-            # print(n)
-            result = n + numbers[i+1]
+    sum = 0
+    result = []
+    for n in numbers:
+        for i in numbers[numbers.index(n)+1:]:
+            sum = n + i
+            result.append(sum)
+    return result
 
-        print(result)
 
 def endings(words):
     endings_list = []
