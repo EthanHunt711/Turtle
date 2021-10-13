@@ -4,17 +4,29 @@ emma = gutenberg.sents('austen-emma.txt')
 
 
 def print_sents_with_word(word):
-    for m in emma:
-        if word in m:
-            print(m)
+    for s in emma:
+        if word in s:
+            print(s)
 
 
 def find_shortest_sent(word):
-    p = 0
-    for word in emma[p]:
-        if len(emma[p]) < len(emma(p+1)):
-            return emma[p]
-    return None
+    min_sen = []
+    for s in emma:
+        if word in s:
+            min_sen.append(s)
+    return min(min_sen)
 
 
-print_sents_with_word('the')
+def conc3(words):
+    con_sen = []
+    for i, s in enumerate(emma):
+        if words in s:
+            con_sen.append(s)
+    for l in con_sen:
+        print(f'{l[l.index(words)-3:l.index(words)+4]}')
+
+
+
+
+
+

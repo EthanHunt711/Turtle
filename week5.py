@@ -30,39 +30,47 @@ def allit(words):
         return True
     else:
         first_letter = words[0][0].lower()
-        i = 0
         for w in words:
             w = w.lower()
-            print(w[0])
             if w[0] != first_letter:
                 return False
         return True
 
 
 def anti_allit(words):
-    first_letter = words[0][:1]
-    for l in words:
-        if not l.startswith(first_letter):
-            return True
-    return False
+    if len(words) <= 1:
+        return True
+    else:
+        first_letter_list = []
+        for w in words:
+            w = w.lower()
+            first_letter_list.append(w[0])
+        for char in first_letter_list:
+            if first_letter_list.count(char) > 1:
+                return False
+        return True
 
 
 def addpairs(numbers):
-    result = []
+    result = 0
     for i, n in enumerate(numbers):
-        if i+1 <= len(numbers):
-            cum_num = n + numbers[i+1]
-            result.append(cum_num)
-    return ''.join(result)
+        if i < len(numbers):
+            # print(numbers[i+1])
+            # print(n)
+            result = n + numbers[i+1]
 
+        print(result)
 
 def endings(words):
-    endings_list = [words]
-    for c in words:
-        if len(words) > 0:
-            words = words.strip(words[:1])
+    endings_list = []
+    if len(words) < 1:
+        return []
+    else:
+        endings_list.insert(0, words)
+        for c in range(len(words)-1):
+            words = words.strip(words[0])
             endings_list.append(words)
-    return endings_list
+        return endings_list
 
 
 def vhistogram(numbers, char):
@@ -98,20 +106,17 @@ def progress(string):
 
 
 def midchars(strings):
-    first_last_chars = []
-    # endchars = []
+    startchars = []
+    endchars = []
     result = []
     for s in strings:
-        first_last_chars.append(s[0])
-        first_last_chars.append(s[-1])
+        startchars.append(s[0])
+        endchars.append(s[-1])
+    for s in strings:
         for c in s[1:-1]:
-            print(s[1:-1])
-            if c not in first_last_chars:
-                print(c)
+            if c not in startchars and c not in endchars:
                 result.append(c)
-        print(first_last_chars)
-
-    return ''.join(sorted(result))
+    return ''.join(sorted(set(result)))
 
 
 
