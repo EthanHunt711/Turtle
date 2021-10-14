@@ -28,6 +28,11 @@ def conc3(words):
         print(f'{l[l.index(words)-3:l.index(words)+4]}')
 
 
+def conc3_n(word):
+    for sent in emma:
+        if word in sent:
+            index = sent.index(word)
+            print(f'{sent[index-3:index+4]}')
 
 
 

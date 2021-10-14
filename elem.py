@@ -25,4 +25,7 @@ def make_atom(d):
     print(atom)
 
 
+make_atom(elements)
+
+
 

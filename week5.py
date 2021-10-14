@@ -1,6 +1,12 @@
 def mymin(numbers):
-    numbers.sort()
-    return numbers[0]
+    m = 0
+    mini = 0
+    for n in numbers:
+        for n_n in numbers:
+            m = n_n
+        if n < m:
+            mini = n
+    return mini
 
 
 def find_longer(words, n):
