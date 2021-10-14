@@ -19,20 +19,14 @@ def find_shortest_sent(word):
         return None
 
 
-def conc3(words):
-    con_sen = []
-    for i, s in enumerate(emma):
-        if words in s:
-            con_sen.append(s)
-    for l in con_sen:
-        print(f'{l[l.index(words)-3:l.index(words)+4]}')
-
-
-def conc3_n(word):
+def conc3(word):
     for sent in emma:
         if word in sent:
             index = sent.index(word)
-            print(f'{sent[index-3:index+4]}')
+            if index > 2:
+                print(f'{sent[index - 3:index + 4]}')
+            else:
+                print(f'{sent[index - index:index + 4]}')
 
 
 

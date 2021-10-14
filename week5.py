@@ -1,11 +1,8 @@
 def mymin(numbers):
-    m = 0
-    mini = 0
+    mini = numbers[0]
     for n in numbers:
-        for n_n in numbers:
-            m = n_n
-        if n < m:
-            mini = n
+            if n < mini:
+                mini = n
     return mini
 
 
@@ -60,10 +57,9 @@ def anti_allit(words):
 def addpairs(numbers):
     sum = 0
     result = []
-    for n in numbers:
-        for i in numbers[numbers.index(n)+1:]:
-            sum = n + i
-            result.append(sum)
+    for i, n in enumerate(numbers):
+        for t in numbers[i+1:]:
+            result.append(n + t)
     return result
 
 
