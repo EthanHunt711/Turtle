@@ -22,11 +22,12 @@ def find_shortest_sent(word):
 def conc3(word):
     for sent in emma:
         if word in sent:
-            index = sent.index(word)
-            if index > 2:
-                print(f'{sent[index - 3:index + 4]}')
-            else:
-                print(f'{sent[index - index:index + 4]}')
+            for i, w in enumerate(sent):
+                if w == word:
+                    if i > 2:
+                        print(f'{sent[i - 3:i + 4]}')
+                    else:
+                        print(f'{sent[i - i:i + 4]}')
 
 
 
