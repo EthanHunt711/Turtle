@@ -25,7 +25,8 @@ elements = [None, 'Hydrogen', 'Helium', 'Lithium', 'Beryllium',
 def make_atom(d):
     dic = {}
     for n, elem in enumerate(d):
-        dic[n] = elem
+        if n > 0:
+            dic[elem] = n
     return dic
 
 
