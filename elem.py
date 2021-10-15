@@ -1,3 +1,5 @@
+import copy
+
 elements = [None, 'Hydrogen', 'Helium', 'Lithium', 'Beryllium',
             'Boron', 'Carbon', 'Nitrogen', 'Oxygen', 'Fluorine',
             'Neon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
@@ -21,11 +23,17 @@ elements = [None, 'Hydrogen', 'Helium', 'Lithium', 'Beryllium',
 
 
 def make_atom(d):
-    atom = d.copy()
-    print(atom)
+    dic = {}
+    for n, elem in enumerate(d):
+        dic[n] = elem
+    return dic
 
 
-make_atom(elements)
+atom = make_atom(elements)
+
+
+
+
 
 
 
