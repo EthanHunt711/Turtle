@@ -213,9 +213,15 @@ def guess_code(language):
             return language[:2].lower()
 
 
-def report_no_match():
+def report_no_match_2letter():
     for code in sorted(langnames):
         if code != guess_code(langnames[code]).lower():
+            print(f'{code} does not match {langnames[code]}')
+
+
+def report_no_match():
+    for code in sorted(langnames):
+        if code[0] != guess_code(langnames[code]).lower()[0]:
             print(f'{code} does not match {langnames[code]}')
 
 
