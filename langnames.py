@@ -194,11 +194,17 @@ langnames = {'ab': 'Abkhazian',
 def can_speak(langcodes):
     language_name = []
     for lc in langcodes:
-        if lc in langnames:
-            language_name.append(langnames[lc])
+        if lc in langnames.keys():
+            language_name.append((langnames.get(lc, 'an unidentified language')))
             language_name.sort()
-        return f'I can speak {", ".join(language_name[:(len(language_name) - 2)])}' + ", " + f'{" and ".join(language_name[(len(language_name) - 2):])}.'
-    return 'I cannot speak.'
+    if len(language_name) == 0:
+        return 'I cannot speak'
+    elif len(language_name) == 1:
+        return f'I can only speak {language_name[0]}'
+    elif len(language_name) == 2:
+        return f'I can speak {language_name[0]} and {language_name[1]}'
+    else:
+        return f'I can speak {", ".join(language_name[:- 2])}, {language_name[-2]} and {language_name[-1]}.'
 
 
 def guess_code(language):
