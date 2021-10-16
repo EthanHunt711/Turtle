@@ -1,4 +1,6 @@
 import random
+import sys
+import time
 
 leettrans = {'a': ['4', '/-\\', '@', '/\\'],
              'b': ['8', '|3', '13'],
@@ -31,15 +33,10 @@ leettrans = {'a': ['4', '/-\\', '@', '/\\'],
 
 
 def leet(string, prob):
-
-    no_change = [' ', '.']
     for c in string:
-        if random.random() < prob:
-            if c in no_change:
-                c = c
-            elif c.upper() is True:
-                c = c
-            else:
+        if c.isalpha() is True:
+            if random.random() <= prob:
+                c = c.lower()
                 string = string.replace(c, random.choice(leettrans[c]), 1)
     return string
 
@@ -47,9 +44,12 @@ def leet(string, prob):
 def leet_loop(probability):
     while True:
         text = input('Please enter a word, no matter how short or long: ')
+        if text == "":
+            print('Let me sleep on it....')
+            time.sleep(5)
+            print('Sorry! No more leets this time, bye')
+            sys.exit()
         print(leet(text, probability))
-        if text == ' ':
-            print('no more leets this time, bye')
-            break
 
-leet_loop(0.45)
+
+leet_loop(0.34)
