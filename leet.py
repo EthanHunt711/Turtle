@@ -33,11 +33,14 @@ leettrans = {'a': ['4', '/-\\', '@', '/\\'],
 
 
 def leet(string, prob):
-    for c in string:
-        if c.isalpha() is True:
-            if random.random() <= prob:
-                c = c.lower()
-                string = string.replace(c, random.choice(leettrans[c]), 1)
+    if random.random() <= prob:
+        for c in string:
+            if c in 'åÅäÄ':
+                c = 'a'
+            if c in 'öÖ':
+                c = 'o'
+            if c.isalpha() is True:
+                string = string.replace(c, random.choice(leettrans[c.lower()]), 1)
     return string
 
 
@@ -48,8 +51,8 @@ def leet_loop(probability):
             print('Let me sleep on it....')
             time.sleep(5)
             print('Sorry! No more leets this time, bye')
-            sys.exit()
+            break
         print(leet(text, probability))
 
 
-leet_loop(0.34)
+#leet_loop(0.34)
