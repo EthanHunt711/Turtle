@@ -55,4 +55,4 @@ def leet_loop(probability):
         print(leet(text, probability))
 
 
-#leet_loop(0.34)
+leet_loop(0.34)
