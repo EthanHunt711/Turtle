@@ -43,7 +43,7 @@ def leet(string, prob):
 
 def leet_loop(probability):
     while True:
-        text = input('Please enter a word, no matter how short or long: ')
+        text = input('Please enter a text, no matter how short or long: ')
         if text == "":
             print('Let me sleep on it....')
             time.sleep(5)
