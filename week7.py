@@ -8,7 +8,14 @@ def conc(starts, ends):
 
 
 def no_fours(words):
+    changed = False
+    out_l = []
     for w in words:
         if len(w) == 4:
             w = w.strip(w[-1])
-    return w
+            changed = True
+        w
+        out_l.append(w)
+    return out_l, changed
+
+
