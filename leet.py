@@ -1,5 +1,4 @@
 import random
-import sys
 import time
 
 leettrans = {'a': ['4', '/-\\', '@', '/\\'],
@@ -33,15 +32,13 @@ leettrans = {'a': ['4', '/-\\', '@', '/\\'],
 
 
 def leet(string, prob):
-    if random.random() <= prob:
-        for c in string:
-            if c in 'åÅäÄ':
-                c = 'a'
-            if c in 'öÖ':
-                c = 'o'
-            if c.isalpha() is True:
-                string = string.replace(c, random.choice(leettrans[c.lower()]), 1)
-    return string
+    out_l = []
+    for i, c in enumerate(string):
+        if c.lower() in leettrans.keys():
+            if random.random() <= prob:
+                c = random.choice(leettrans[string[i].lower()])
+        out_l.append(c)
+    return ''.join(out_l)
 
 
 def leet_loop(probability):
