@@ -19,3 +19,31 @@ def no_fours(words):
     return out_l, changed
 
 
+def combine_dicts(d1, d2):
+    new_d = {}
+    for k_1 in d1.keys():
+        if k_1 in d2.keys():
+            new_d.update({k_1: d1.get(k_1) + d2.get(k_1)})
+        else:
+            new_d.update({k_1: d1.get(k_1)})
+    for k_2 in d2.keys():
+        if k_2 not in d1.keys():
+            new_d.update({k_2: d2.get(k_2)})
+    return new_d
+
+
+def collatz(n):
+    if n >= 0:
+        if n % 2 == 0:
+            m = n//2
+        else:
+            m = int((3*n) + 1)
+    return m
+
+
+def count_collatz(n):
+    i = 0
+    while n != 1:
+        n = collatz(n)
+        i += 1
+    return i
