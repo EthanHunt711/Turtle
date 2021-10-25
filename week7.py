@@ -12,7 +12,7 @@ def no_fours(words):
     out_l = []
     for w in words:
         if len(w) == 4:
-            w = w.strip(w[-1])
+            w = w[:-1]
             changed = True
         w
         out_l.append(w)
@@ -23,12 +23,12 @@ def combine_dicts(d1, d2):
     new_d = {}
     for k_1 in d1.keys():
         if k_1 in d2.keys():
-            new_d.update({k_1: d1.get(k_1) + d2.get(k_1)})
+            new_d[k_1] = d1.get(k_1) * d2.get(k_1)
         else:
-            new_d.update({k_1: d1.get(k_1)})
+            new_d[k_1] = d1.get(k_1)
     for k_2 in d2.keys():
         if k_2 not in d1.keys():
-            new_d.update({k_2: d2.get(k_2)})
+            new_d[k_2] = d2.get(k_2)
     return new_d
 
 
