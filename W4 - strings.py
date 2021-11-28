@@ -7,10 +7,10 @@ def indef(text):
 
 
 def parens(string):
-    alphabets = []
+    string_2 = ''
     for letter in string:
-        alphabets.append(letter)
-    print(alphabets, sep=", ")
+        string_2 += f'({letter})'
+    return string_2
 
 
 def three_rays(string):
@@ -39,10 +39,13 @@ def first_digit(string):
 
 
 def numbers_for_uc(string):
+    new_string = ''
     for index, character in enumerate(string):
         if character.isupper():
-            return string.replace(character, f'[{str(index)}]')
-    return string
+            new_string += f'[{index}]'
+        else:
+            new_string += character
+    return new_string
 
 
 def grid(s):
@@ -50,6 +53,3 @@ def grid(s):
     for i in s:
         while len(s):
             s.startwirh(n+i)
-
-
-

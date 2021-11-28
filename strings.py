@@ -38,7 +38,7 @@ def firstdigit(string):
 def numbers_for_uc(string):
 
     for index, character in enumerate(string):
-        print(index, character)
+        #print(index, character)
         if character.isupper():
             string = string.replace(character, f'[{index}]', 1)
     return string
