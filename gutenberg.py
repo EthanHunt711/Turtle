@@ -35,4 +35,4 @@ def surprising(sent, freq1):
 
 
 find_surprising('austen-emma.txt')
-# find_surprising('blake-poems.txt')
+find_surprising('blake-poems.txt')
